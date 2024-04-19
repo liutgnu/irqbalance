@@ -62,7 +62,7 @@ make check
 
 %changelog
 * Thu Apr 18 2024 Tao Liu <ltao@redhat.com> - 2:1.9.4-1
-- Update irqbalance to v1.9.4
+- Update irqbalance to v1.9.4 (fedora#2249255)
 
 * Wed Jan 24 2024 Fedora Release Engineering <releng@fedoraproject.org> - 2:1.9.2-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
