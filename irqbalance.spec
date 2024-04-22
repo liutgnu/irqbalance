@@ -63,7 +63,7 @@ make check
 
 %changelog
 * Thu Apr 22 2024 Tao Liu <ltao@redhat.com> - 2:1.9.4-2
-- Drop ProtectKernelTunables(fedora#2276314)
+- Drop ProtectKernelTunables (fedora#2276314)
 
 * Thu Apr 18 2024 Tao Liu <ltao@redhat.com> - 2:1.9.4-1
 - Update irqbalance to v1.9.4 (fedora#2249255)
