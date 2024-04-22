@@ -1,6 +1,6 @@
 Name:           irqbalance
 Version:        1.9.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          2
 Summary:        IRQ balancing daemon
 License:        GPL-2.0-only
@@ -8,6 +8,7 @@ URL:            https://github.com/Irqbalance/irqbalance
 Source0:        %{url}/archive/v%{version}/irqbalance-%{version}.tar.gz
 Patch1:         irqbalance-1.9.0-environment-file-sysconfig.patch
 Patch2:         0001-irqbalance-ui-check-if-using-a-negative-index-of-buf.patch
+Patch3:         0001-Drop-ProtectKernelTunables.patch
 
 BuildRequires:  autoconf automake libtool libcap-ng
 BuildRequires:  glib2-devel pkgconf libcap-ng-devel
@@ -61,6 +62,9 @@ make check
 %systemd_postun_with_restart irqbalance.service
 
 %changelog
+* Thu Apr 22 2024 Tao Liu <ltao@redhat.com> - 2:1.9.4-2
+- Drop ProtectKernelTunables(fedora#2276314)
+
 * Thu Apr 18 2024 Tao Liu <ltao@redhat.com> - 2:1.9.4-1
 - Update irqbalance to v1.9.4 (fedora#2249255)
 
