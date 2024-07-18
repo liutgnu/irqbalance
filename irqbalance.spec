@@ -1,6 +1,6 @@
 Name:           irqbalance
 Version:        1.9.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 Epoch:          2
 Summary:        IRQ balancing daemon
 License:        GPL-2.0-only
@@ -62,6 +62,9 @@ make check
 %systemd_postun_with_restart irqbalance.service
 
 %changelog
+* Thu Jul 18 2024 Fedora Release Engineering <releng@fedoraproject.org> - 2:1.9.4-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_41_Mass_Rebuild
+
 * Tue Apr 30 2024 Timothée Ravier <tim@siosm.fr> - 2:1.9.4-3
 - Enable systemd-lib support (fedora#2276442)
 
