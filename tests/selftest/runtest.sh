@@ -56,7 +56,7 @@ rlJournalStart
 	echo "+ Buildlog:"
 	tail -n 100 $BUILDLOG
 	rlRun "pushd ."
- 	rlRun "cd $TESTDIR"
+ 	rlRun "cd $TESTDIR/irqbalance*"
 	rlRun "make check &> $TESTLOG"   
 	if [ $? -eq 0 ]
 	then
