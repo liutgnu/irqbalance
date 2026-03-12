@@ -142,8 +142,12 @@ static void setup_banned_cpus(void)
 	}
 
 	env = getenv("IRQBALANCE_BANNED_CPULIST");
-	if (env && strlen(env)) {
-		cpulist_parse(env, strlen(env), banned_cpus);
+	if (env) {
+		if (strlen(env)) {
+			cpulist_parse(env, strlen(env), banned_cpus);
+		} else {
+			cpus_clear(banned_cpus);
+		}
 		goto out;
 	}
 
